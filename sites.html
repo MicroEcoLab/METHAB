@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field sites — METHAB</title>
+  <meta name="description" content="METHAB field sites: Lago Grande (Astroni), Lake Averno, Bolle della Malvizza and Solforata di Pomezia.">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Icons (browser tab, phone home screen) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Link preview (WhatsApp, LinkedIn, email...). If the domain changes, update the URLs below. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="METHAB">
+  <meta property="og:title" content="Field sites — METHAB">
+  <meta property="og:description" content="METHAB field sites: Lago Grande (Astroni), Lake Averno, Bolle della Malvizza and Solforata di Pomezia.">
+  <meta property="og:url" content="https://methab.irsa.cnr.it/sites.html">
+  <meta property="og:image" content="https://methab.irsa.cnr.it/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+  <!-- ================= HEADER / MENU (same on every page) ================= -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        METHAB
+      </a>
+      <!-- menu button, visible only on phones -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-btn" aria-label="Menu">☰</label>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="sites.html" class="active">Field sites</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="outputs.html">Outputs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= PAGE TITLE ================= -->
+  <div class="page-head">
+    <div class="container">
+      <span class="eyebrow">Field sites</span>
+      <h1>Where we sample</h1>
+      <p class="lead">
+        Four sites in Campania and Lazio (Italy), shaped by volcanic and hydrothermal
+        activity: three methane-rich environments and one site where methane occurs
+        only in traces. They were chosen for their contrasting methane levels, their rich
+        microbial communities and their proximity to our laboratories, so that samples
+        can be analysed shortly after collection.
+      </p>
+    </div>
+  </div>
+
+  <!-- ================= SITES =================
+       PHOTOS: each site shows photo number 1 of its gallery folder:
+       images/gallery/astroni/astroni1.jpg
+       images/gallery/averno/averno1.jpg
+       images/gallery/malvizza/malvizza1.jpg
+       images/gallery/pomezia/pomezia1.jpg
+       Until a photo is there, a blue gradient is shown instead.
+  -->
+  <section>
+    <div class="container">
+
+      <!-- Site 1 -->
+      <div class="site">
+        <div class="site-photo" style="background-image: url('images/gallery/astroni/astroni1.jpg'), var(--photo-fallback);"></div>
+        <div class="site-text">
+          <span class="tag">Campi Flegrei caldera</span>
+          <h2>Lago Grande (Astroni)</h2>
+          <p>
+            The largest of three small lakes inside the crater of the Astroni volcano, in
+            the Campi Flegrei volcanic district near Naples. Fed by groundwater, it has an
+            oxygen-free bottom layer rich in dissolved methane of biological origin and CO₂,
+            partly of hydrothermal origin.
+          </p>
+        </div>
+      </div>
+
+      <!-- Site 2 -->
+      <div class="site reverse">
+        <div class="site-photo" style="background-image: url('images/gallery/averno/averno1.jpg'), var(--photo-fallback);"></div>
+        <div class="site-text">
+          <span class="tag">Campi Flegrei caldera</span>
+          <h2>Lake Averno</h2>
+          <p>
+            A meromictic volcanic lake: its deep waters never mix with the surface
+            layer, creating a permanently oxygen-free bottom. Methanogenic Archaea
+            thrive in the anoxic bottom waters and sediments, making the lake a natural
+            analog for subsurface environments on other planets.
+          </p>
+        </div>
+      </div>
+
+      <!-- Site 3 -->
+      <div class="site">
+        <div class="site-photo" style="background-image: url('images/gallery/malvizza/malvizza1.jpg'), var(--photo-fallback);"></div>
+        <div class="site-text">
+          <span class="tag">Southern Apennines</span>
+          <h2>Bolle della Malvizza</h2>
+          <p>
+            The largest complex of mud volcanoes in the southern Apennines. Here
+            bubbling mud pools release gas from deep hydrocarbon-rich brines, offering
+            a very different methane source from the volcanic lakes.
+          </p>
+        </div>
+      </div>
+
+      <!-- Site 4 -->
+      <div class="site reverse">
+        <div class="site-photo" style="background-image: url('images/gallery/pomezia/pomezia1.jpg'), var(--photo-fallback);"></div>
+        <div class="site-text">
+          <span class="tag">Colli Albani volcanic district · trace methane</span>
+          <h2>Solforata di Pomezia</h2>
+          <p>
+            A natural degassing area south-west of Rome, in the Colli Albani volcanic
+            district. Its emissions are dominated by CO₂ with hydrogen sulphide, while
+            methane is present only in traces.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WHAT WE COLLECT ================= -->
+  <section class="alt">
+    <div class="container">
+      <span class="eyebrow">In the field</span>
+      <h2>What we collect</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="tag">Water</span>
+          <h3>Water column</h3>
+          <p>Samples pumped from selected depths, with in-situ measurements of
+             temperature, pH, conductivity and redox potential.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Gas</span>
+          <h3>Dissolved and emitted gases</h3>
+          <p>Methane and CO₂ concentrations and their carbon isotopes, used to tell
+             biological from geological methane.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Sediment</span>
+          <h3>Lake and mud sediments</h3>
+          <p>Cores and grab samples for mineralogy, geochemistry and DNA sequencing
+             (16S rRNA and metagenomics).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER (same on every page) ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026–2028 METHAB project</span>
+      <span>Funded by INAF — National Institute for Astrophysics</span>
+      <span>Contact: <a href="mailto:stefano.amalfitano@irsa.cnr.it">stefano.amalfitano@irsa.cnr.it</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
