@@ -55,7 +55,7 @@
 
   <!-- ================= CAROUSELS =================
        PHOTOS ARE LOADED AUTOMATICALLY — no need to edit this file.
-       Put the photos in these folders, numbered from 1 (.jpg, .JPG, .jpeg or .JPEG):
+       Put the photos in these folders, numbered from 1, lowercase ".jpg" (".JPG" will NOT work online):
          images/gallery/astroni/astroni1.jpg, astroni2.jpg, astroni3.jpg ...
          images/gallery/averno/averno1.jpg, averno2.jpg ...
          images/gallery/malvizza/malvizza1.jpg, malvizza2.jpg ...
@@ -219,28 +219,22 @@
         track.appendChild(fig);
       }
 
-      // accepted file extensions (online, upper/lower case matters)
-      const PHOTO_EXT = ['.jpg', '.JPG', '.jpeg', '.JPEG'];
-      const VIDEO_EXT = ['.mp4', '.MP4'];
-
-      // try photo 1, 2, 3 ... until one is missing (each with every extension)
-      function load(i, e = 0) {
-        if (e >= PHOTO_EXT.length) { loadVideo(); return; }   // no more photos: look for a video
-        const src = folder + '/' + name + i + PHOTO_EXT[e];
+      // try photo 1, 2, 3 ... until one is missing
+      function load(i) {
+        const src = folder + '/' + name + i + '.jpg';
         const img = new Image();
         img.onload  = () => { total++; addSlide(src, caption); update(); load(i + 1); };
-        img.onerror = () => load(i, e + 1);  // try the next extension
+        img.onerror = loadVideo;             // no more photos: look for a video
         img.src = src;
       }
 
       // optional video, shown as the last slide: e.g. images/gallery/averno/averno-video.mp4
-      function loadVideo(e = 0) {
-        if (e >= VIDEO_EXT.length) { finish(); return; }
-        const src = folder + '/' + name + '-video' + VIDEO_EXT[e];
+      function loadVideo() {
+        const src = folder + '/' + name + '-video.mp4';
         const v = document.createElement('video');
         v.preload = 'metadata';
         v.onloadedmetadata = () => { total++; addVideo(src); finish(); };
-        v.onerror = () => loadVideo(e + 1);
+        v.onerror = finish;
         v.src = src;
       }
       function addVideo(src) {
